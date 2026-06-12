@@ -602,6 +602,222 @@ details p {
   background: #070808;
 }
 
+.download-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+  gap: 36px;
+  align-items: center;
+  min-height: 82vh;
+  padding: 140px max(24px, calc((100vw - 1180px) / 2)) 72px;
+  overflow: hidden;
+}
+
+.download-hero-copy,
+.release-card {
+  position: relative;
+  z-index: 1;
+}
+
+.download-title {
+  max-width: 820px;
+  font-size: clamp(3.3rem, 8vw, 7.4rem);
+}
+
+.download-hero-copy p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.release-card,
+.download-option,
+.notice-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+}
+
+.release-card {
+  padding: 24px;
+}
+
+.release-status,
+.release-meter {
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.release-status span,
+.release-status strong,
+.release-meter span,
+.release-meter strong,
+.release-specs span,
+.release-specs strong {
+  display: block;
+}
+
+.release-status span,
+.release-meter span,
+.release-specs span {
+  color: var(--muted);
+}
+
+.release-status strong {
+  margin-top: 6px;
+  color: var(--green);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.release-meter {
+  margin-top: 18px;
+}
+
+.release-meter strong {
+  margin-top: 5px;
+  color: var(--yellow);
+}
+
+.release-specs {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.release-specs div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.release-specs strong {
+  color: var(--text);
+  text-align: right;
+}
+
+.download-options-band,
+.requirements-band,
+.notice-band,
+.changelog-band {
+  padding: 72px max(24px, calc((100vw - 1180px) / 2));
+}
+
+.download-options-band,
+.changelog-band {
+  background: #0d0f0f;
+}
+
+.download-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.download-option {
+  min-height: 330px;
+  padding: 24px;
+}
+
+.download-option.is-featured {
+  border-color: rgba(48, 255, 130, 0.38);
+  background:
+    linear-gradient(135deg, rgba(48, 255, 130, 0.12), rgba(255, 255, 255, 0.04)),
+    var(--panel);
+}
+
+.download-option p {
+  min-height: 100px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.requirements-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 470px);
+  gap: 36px;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(34, 215, 255, 0.08), transparent 48%),
+    #090a0a;
+}
+
+.requirements-copy p {
+  max-width: 650px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.requirements-grid {
+  display: grid;
+  gap: 0;
+  padding: 20px;
+  border: 1px solid rgba(48, 255, 130, 0.26);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.notice-band {
+  background:
+    linear-gradient(135deg, rgba(255, 61, 242, 0.08), transparent 44%),
+    #0d0f0f;
+}
+
+.notice-panel {
+  max-width: 900px;
+  padding: 28px;
+}
+
+.notice-panel p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+  max-width: 920px;
+  margin-top: 34px;
+}
+
+.timeline article {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.timeline article > span {
+  display: grid;
+  width: 48px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(48, 255, 130, 0.12);
+  color: var(--green);
+  font-family: "Rajdhani", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.timeline p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 @media (max-width: 900px) {
   .site-header {
     position: absolute;
@@ -612,11 +828,14 @@ details p {
   }
 
   .hero-section,
-  .download-band {
+  .download-band,
+  .download-hero,
+  .requirements-band {
     grid-template-columns: 1fr;
   }
 
-  .hero-section {
+  .hero-section,
+  .download-hero {
     padding-top: 118px;
   }
 
@@ -625,6 +844,10 @@ details p {
   }
 
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download-options-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -638,12 +861,18 @@ details p {
   .hero-section,
   .feature-band,
   .download-band,
-  .faq-band {
+  .faq-band,
+  .download-hero,
+  .download-options-band,
+  .requirements-band,
+  .notice-band,
+  .changelog-band {
     padding-left: 18px;
     padding-right: 18px;
   }
 
-  .hero-section {
+  .hero-section,
+  .download-hero {
     gap: 32px;
     padding-bottom: 54px;
   }
@@ -675,5 +904,9 @@ details p {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .timeline article {
+    grid-template-columns: 1fr;
   }
 }

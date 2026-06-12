@@ -2,9 +2,15 @@
 
 Site estatico em HTML e CSS para divulgar o POP Download GM, um programa para Windows focado em downloads de jogos para PC.
 
+## Paginas do site
+
+- `index.html`: pagina principal.
+- `download.html`: pagina de download, requisitos e changelog.
+- `styles.css`: visual do site inteiro.
+
 ## Como trocar o link de download
 
-No arquivo `index.html`, procure por `href="#"` nos botoes de download e troque o `#` pelo link real do instalador do Windows.
+No arquivo `download.html`, procure por `href="#"` nos botoes de download e troque o `#` pelo link real do instalador do Windows.
 
 Exemplo:
 
