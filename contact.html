@@ -4,86 +4,217 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - POP Download GM</title>
+  <meta name="description" content="Entre em contato com a equipe do POP Download GM. Tire dúvidas, reporte bugs ou envie sugestões.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* Estilos específicos para a página de contato */
+    .contact-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
     .contact-form {
       display: grid;
-      gap: 20px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .contact-form label {
-      font-weight: 700;
-      color: var(--muted);
-    }
-    .contact-form input, .contact-form textarea {
+      gap: 24px;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px 16px;
-      color: var(--text);
-      font-family: Inter, sans-serif;
-      width: 100%;
+      border-radius: 16px;
+      padding: 32px;
     }
-    .contact-form button {
-      margin-top: 8px;
+    
+    .form-group {
+      display: grid;
+      gap: 8px;
+    }
+    
+    .form-group label {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 0 2px rgba(48, 255, 130, 0.1);
+    }
+    
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--muted);
+      opacity: 0.6;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      color: #04100a;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(48, 255, 130, 0.3);
+    }
+    
+    .contact-info {
+      margin-top: 32px;
+      padding: 24px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      text-align: center;
+    }
+    
+    .contact-info h3 {
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    
+    .contact-info p {
+      color: var(--muted);
+    }
+    
+    .contact-info a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    
+    .alert {
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    
+    .alert-success {
+      background: rgba(48, 255, 130, 0.1);
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+    
+    .alert-error {
+      background: rgba(255, 77, 109, 0.1);
+      border: 1px solid var(--danger);
+      color: var(--danger);
+    }
+    
+    @media (max-width: 768px) {
+      .contact-form {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">GM</span><span>POP Download GM</span></a>
-    <nav class="nav-links">
-      <a href="index.html">Início</a><a href="about.html">Sobre</a><a href="index.html#recursos">Recursos</a>
-      <a href="download.html">Download</a><a href="contact.html">Contato</a><a href="index.html#faq">FAQ</a>
+    <a class="brand" href="index.html" aria-label="POP Download GM">
+      <span class="brand-mark">GM</span>
+      <span>POP Download GM</span>
+    </a>
+    <nav class="nav-links" aria-label="Navegacao principal">
+      <a href="index.html">Início</a>
+      <a href="about.html">Sobre</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="download.html">Download</a>
+      <a href="contact.html">Contato</a>
+      <a href="index.html#faq">FAQ</a>
     </nav>
   </header>
 
   <main>
-    <section class="download-hero" style="min-height: 55vh;">
-      <div class="download-hero-copy">
-        <p class="eyebrow">Fale conosco</p>
-        <h1 class="download-title">Entre em contato</h1>
-        <p>Dúvidas, sugestões ou reports de bug? Use o formulário ou envie um e-mail diretamente.</p>
+    <section class="hero-section" style="min-height: 40vh; padding-bottom: 0;">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-light hero-light-one" aria-hidden="true"></div>
+      <div class="hero-light hero-light-two" aria-hidden="true"></div>
+      
+      <div class="hero-content" style="text-align: center;">
+        <p class="eyebrow">Fale Conosco</p>
+        <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">
+          <span>Entre em</span>
+          <span class="hero-title-accent">Contato</span>
+        </h1>
+        <p class="hero-copy" style="max-width: 600px; margin: 20px auto 0;">
+          Dúvidas, sugestões ou encontrou algum bug? Preencha o formulário abaixo e retornaremos o mais breve possível.
+        </p>
       </div>
     </section>
 
-    <section class="requirements-band" style="background: #0d0f0f; padding-top: 30px;">
-      <div style="max-width: 800px; margin: 0 auto; width: 100%;">
-        <form class="contact-form" action="#" method="post">
-          <div>
-            <label>Seu nome</label>
-            <input type="text" placeholder="Ex: João Silva" required>
-          </div>
-          <div>
-            <label>E-mail</label>
-            <input type="email" placeholder="joao@email.com" required>
-          </div>
-          <div>
-            <label>Assunto</label>
-            <input type="text" placeholder="Sugestão, bug, dúvida...">
-          </div>
-          <div>
-            <label>Mensagem</label>
-            <textarea rows="5" placeholder="Descreva detalhadamente..."></textarea>
-          </div>
-          <button class="button button-primary" type="submit" style="border:none; cursor:pointer;">Enviar mensagem</button>
-          <p style="color: var(--muted); font-size: 0.85rem;">* Este formulário é estático. Para funcionar, configure um script de backend ou use um serviço como Formspree.</p>
-        </form>
-        <div class="notice-panel" style="margin-top: 40px;">
-          <h3>📧 E-mail direto</h3>
-          <p>emersonstz1@hotmail.com</p>
+    <div class="contact-container">
+      <!-- Formulário com Formspree -->
+      <form class="contact-form" action="https://formspree.io/f/mkoakvvk" method="POST">
+        <!-- Campo honeypot anti-spam (escondido para humanos, visível para bots) -->
+        <input type="text" name="_gotcha" style="display: none;">
+        
+        <!-- Redirecionamento após envio bem-sucedido -->
+        <input type="hidden" name="_next" value="https://emersonsantarem.github.io/pop-download-gm/obrigado.html">
+        
+        <div class="form-group">
+          <label for="name">Nome completo *</label>
+          <input type="text" id="name" name="name" placeholder="Seu nome" required>
         </div>
+        
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Assunto *</label>
+          <input type="text" id="subject" name="subject" placeholder="Dúvida, sugestão, bug..." required>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Mensagem *</label>
+          <textarea id="message" name="message" rows="6" placeholder="Descreva detalhadamente sua mensagem..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Enviar mensagem</button>
+      </form>
+      
+      <div class="contact-info">
+        <h3>📧 E-mail direto</h3>
+        <p>Prefere enviar um e-mail diretamente?<br>
+        <a href="mailto:emersonstz1@hotmail.com">emersonstz1@hotmail.com</a></p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div><span>POP Download GM</span><span>Programa de downloads para PC</span></div>
-    <div style="display: flex; gap: 24px;"><a href="privacy.html">Privacidade</a><a href="terms.html">Termos</a></div>
+    <div>
+      <span>POP Download GM</span>
+      <span>Programa de downloads para PC</span>
+    </div>
+    <div style="display: flex; gap: 24px;">
+      <a href="privacy.html">Privacidade</a>
+      <a href="terms.html">Termos</a>
+    </div>
   </footer>
 </body>
 </html>
