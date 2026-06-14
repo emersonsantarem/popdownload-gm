@@ -81,15 +81,13 @@
           <div class="app-screen">
             <div class="screen-header">
               <span>Biblioteca de jogos</span>
-              <strong>ONLINE</strong>
+              <!-- "ONLINE" removido -->
             </div>
             
-            <!-- IMAGEM NO GAME-COVER (SUBSTITUI O TEXTO "PC Repack Hub") -->
             <div class="game-cover">
               <img src="cover-preview.jpg" alt="Preview do POP Download GM" class="cover-image">
-              <div class="cover-badge">NEW</div>
+              <!-- selo "NEW" removido -->
             </div>
-            <!-- FIM DA IMAGEM -->
 
             <div class="progress-panel">
               <span>Download ativo</span>
@@ -166,22 +164,22 @@
 
     <section class="faq-band" id="faq">
       <div class="section-heading">
-        <p class="eyebrow">Perguntas rapidas</p>
-        <h2>Antes de publicar</h2>
+        <p class="eyebrow">Perguntas frequentes</p>
+        <h2>FAQ</h2>
       </div>
 
       <div class="faq-list">
-        <details open>
-          <summary>Onde coloco o link do programa?</summary>
-          <p>Substitua o simbolo # nos botoes de download pelo link real do instalador do Windows.</p>
+        <details>
+          <summary>Onde coloco o link do programa para download?</summary>
+          <p>Substitua o símbolo <code>#</code> nos botões de download (no arquivo <code>download.html</code>) pelo link real do seu instalador do Windows. Você pode hospedar o arquivo em uma Release do GitHub ou em um serviço de arquivos.</p>
         </details>
         <details>
-          <summary>Qual hospedagem gratis usar?</summary>
-          <p>GitHub Pages e uma boa opcao para site estatico. Netlify tambem e simples e tem publicacao por arrastar a pasta.</p>
+          <summary>Qual hospedagem gratuita usar para o site?</summary>
+          <p>GitHub Pages e Netlify são ótimas opções. O GitHub Pages é integrado ao seu repositório; o Netlify oferece formulários prontos e deploy por drag-and-drop.</p>
         </details>
         <details>
-          <summary>Posso trocar cores e textos?</summary>
-          <p>Sim. Os textos estao no arquivo HTML e as cores principais estao no inicio do arquivo CSS.</p>
+          <summary>Posso trocar as cores e os textos do site?</summary>
+          <p>Sim. Os textos estão nos arquivos HTML e as cores principais estão no arquivo <code>styles.css</code>, na seção <code>:root</code>. Basta editar e fazer commit.</p>
         </details>
       </div>
     </section>
