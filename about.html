@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre - POP Download GM</title>
+  <meta name="description" content="Conheça a história e os valores do POP Download GM: um projeto sério, de código aberto, focado em leveza e organização para gamers de PC.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
@@ -15,7 +16,7 @@
       <span class="brand-mark">GM</span>
       <span>POP Download GM</span>
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Navegacao principal">
       <a href="index.html">Início</a>
       <a href="about.html">Sobre</a>
       <a href="index.html#recursos">Recursos</a>
@@ -26,47 +27,131 @@
   </header>
 
   <main>
-    <section class="download-hero" style="min-height: 60vh;">
-      <div class="hero-grid"></div>
-      <div class="hero-light hero-light-one"></div>
-      <div class="download-hero-copy">
-        <p class="eyebrow">Conheça a história</p>
-        <h1 class="download-title">Sobre o POP Download GM</h1>
-        <p>Um launcher leve e focado em organização de downloads para a comunidade de jogos PC.</p>
+    <!-- Seção hero da página Sobre -->
+    <section class="hero-section" style="min-height: 60vh; padding-bottom: 0;">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-light hero-light-one" aria-hidden="true"></div>
+      <div class="hero-light hero-light-two" aria-hidden="true"></div>
+      <div class="hero-content" style="text-align: center;">
+        <p class="eyebrow">Transparência e qualidade</p>
+        <h1 class="hero-title" style="font-size: clamp(2.8rem, 7vw, 5rem);">
+          <span>Sobre o</span>
+          <span class="hero-title-accent">POP Download GM</span>
+        </h1>
+        <p class="hero-copy" style="max-width: 800px; margin: 20px auto 0;">
+          Um projeto pessoal que se tornou uma ferramenta leve, gratuita e de código aberto para a comunidade gamer de PC.
+        </p>
       </div>
     </section>
 
-    <section class="requirements-band" style="background: #0d0f0f;">
+    <!-- Seção: Filosofia e propósito -->
+    <section class="feature-band" style="background: #0d0f0f;">
+      <div class="section-heading">
+        <p class="eyebrow">Por que existimos</p>
+        <h2>Organizar sem pesar</h2>
+      </div>
+      <div class="feature-grid" style="grid-template-columns: 1fr;">
+        <div class="feature-card">
+          <p style="font-size: 1.2rem; line-height: 1.6;">Cansado de launchers pesados, sites confusos e downloads desorganizados? O POP Download GM nasceu para resolver isso de forma simples, gratuita e transparente. Meu objetivo é oferecer uma central gamer que caiba em qualquer PC, consumindo pouca RAM e sem propaganda invasiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Código aberto e GitHub -->
+    <section class="requirements-band" style="background: #090a0a;">
       <div class="requirements-copy">
-        <h2>Por que criamos</h2>
-        <p>Jogadores de PC muitas vezes precisam alternar entre vários sites de repack, gerenciar múltiplos instaladores e controlar o espaço em disco. O POP Download GM nasceu para ser uma central única, com design de launcher moderno e consumo Mínimo de memória.</p>
-        <br>
-        <h2>Missão</h2>
-        <p>Oferecer uma ferramenta simples, rápida e que não atrapalhe a experiência do jogo. Queremos que o programa fique aberto em segundo plano, use pouca RAM e ajude a organizar a biblioteca de jogos repack.</p>
+        <h2>🔓 Código aberto e GitHub</h2>
+        <p>Todo o código-fonte do site e do programa (em breve) está disponível no GitHub. Você pode ver como funciona, sugerir melhorias ou até mesmo contribuir. Isso garante transparência, segurança e evolução colaborativa.</p>
+        <div style="margin-top: 24px;">
+          <a href="https://github.com/emersonsantarem/pop-download-gm" class="button button-primary" target="_blank" style="background: #24292f; border-color: #e1e4e8; color: white;">📂 Ver no GitHub</a>
+        </div>
       </div>
       <div class="requirements-grid">
-        <div class="version-row"><span>Versão inicial</span><strong>v1.0</strong></div>
-        <div class="version-row"><span>Desenvolvedor</span><strong>POP Download GM Team</strong></div>
-        <div class="version-row"><span>Modelo</span><strong>Gratuito</strong></div>
-        <div class="version-row"><span>Plataforma</span><strong>Windows</strong></div>
+        <div class="version-row"><span>Licença</span><strong>MIT (Open Source)</strong></div>
+        <div class="version-row"><span>Repositório</span><strong>emersonsantarem/pop-download-gm</strong></div>
+        <div class="version-row"><span>Commits</span><strong>Histórico público</strong></div>
+        <div class="version-row"><span>Issues</span><strong>Participação aberta</strong></div>
       </div>
     </section>
 
-    <section class="feature-band">
-      <div class="section-heading">
-        <h2>Valores</h2>
+    <!-- Seção: Compromissos (segurança, privacidade, gratuidade) -->
+    <section class="notice-band" style="background: #0d0f0f;">
+      <div class="notice-panel">
+        <p class="eyebrow">Nossos valores</p>
+        <h2>Compromisso com o usuário</h2>
+        <ul style="color: var(--muted); line-height: 1.8; margin-top: 20px;">
+          <li>✅ <strong>Gratuito para sempre</strong> – sem versões pagas, sem anúncios.</li>
+          <li>✅ <strong>Leveza extrema</strong> – menos de 50MB de RAM em uso típico.</li>
+          <li>✅ <strong>Privacidade em primeiro lugar</strong> – não coletamos dados pessoais.</li>
+          <li>✅ <strong>Código aberto</strong> – você pode auditar e confiar.</li>
+          <li>✅ <strong>Atualizações constantes</strong> – correções e melhorias frequentes.</li>
+        </ul>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card"><span class="feature-icon">⚡</span><h3>Leveza</h3><p>Menos de 50MB de RAM em uso típico.</p></div>
-        <div class="feature-card"><span class="feature-icon">🎮</span><h3>Foco no gamer</h3><p>Interface direta, sem anúncios ou distrações.</p></div>
-        <div class="feature-card"><span class="feature-icon">🔓</span><h3>Código aberto</h3><p>Transparência e liberdade para a comunidade.</p></div>
+    </section>
+
+    <!-- Seção: Quem está por trás -->
+    <section class="requirements-band" style="background: #090a0a;">
+      <div class="requirements-copy">
+        <h2>👤 Desenvolvedor</h2>
+        <p>Olá! Me chamo Emerson, sou desenvolvedor independente e apaixonado por jogos no PC. Criei o POP Download GM para resolver um problema que eu mesmo tinha: organizar downloads de repacks sem precisar de programas pesados ou sites cheios de anúncios. É um projeto feito com seriedade, e todo feedback é bem-vindo.</p>
+        <p style="margin-top: 16px;">Se quiser bater um papo, reportar um bug ou dar uma sugestão, é só usar o <a href="contact.html">formulário de contato</a> ou abrir uma issue no GitHub.</p>
+      </div>
+      <div class="requirements-grid">
+        <div class="version-row"><span>Nome</span><strong>Emerson Santarem</strong></div>
+        <div class="version-row"><span>GitHub</span><strong>@emersonsantarem</strong></div>
+        <div class="version-row"><span>Projetos</span><strong>Open Source</strong></div>
+        <div class="version-row"><span>Experiência</span><strong>+5 anos desenvolvimento</strong></div>
+      </div>
+    </section>
+
+    <!-- Seção: Roadmap (próximos passos) -->
+    <section class="changelog-band" style="background: #0d0f0f;">
+      <div class="section-heading">
+        <p class="eyebrow">Futuro</p>
+        <h2>Roadmap do projeto</h2>
+      </div>
+      <div class="timeline">
+        <article>
+          <span>01</span>
+          <div>
+            <h3>v1.1 – Busca integrada</h3>
+            <p>Campo de busca para filtrar jogos na biblioteca.</p>
+          </div>
+        </article>
+        <article>
+          <span>02</span>
+          <div>
+            <h3>v1.2 – Mais fontes de repack</h3>
+            <p>Integração com novas comunidades e curadoria de links seguros.</p>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <div>
+            <h3>v2.0 – Modo escuro aprimorado e tema customizável</h3>
+            <p>Personalização total da interface.</p>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <div>
+            <h3>Plugin para navegador</h3>
+            <p>Extensão que captura downloads diretamente do navegador.</p>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div><span>POP Download GM</span><span>Programa de downloads para PC</span></div>
-    <div style="display: flex; gap: 24px;"><a href="privacy.html">Privacidade</a><a href="terms.html">Termos</a></div>
+    <div>
+      <span>POP Download GM</span>
+      <span>Programa de downloads para PC</span>
+    </div>
+    <div style="display: flex; gap: 24px;">
+      <a href="privacy.html">Privacidade</a>
+      <a href="terms.html">Termos</a>
+    </div>
   </footer>
 </body>
 </html>
