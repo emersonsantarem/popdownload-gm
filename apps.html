@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativos POP Nuvem</title>
+  <meta name="description" content="Conheça todos os aplicativos da POP Nuvem: POP Download GM, PopBoost e Pop Sound. Ferramentas gratuitas para turbinar o desempenho do seu PC. Baixe agora!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .apps-hero {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(48, 255, 130, 0.1), rgba(34, 215, 255, 0.1));
+      border-radius: 20px;
+      padding: 60px 20px;
+      margin-bottom: 40px;
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin: 40px 0;
+    }
+    .app-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: var(--green);
+    }
+    .app-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    .app-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+    .app-badge {
+      display: inline-block;
+      background: rgba(48, 255, 130, 0.15);
+      color: var(--green);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .app-description {
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 20px 0;
+      min-height: 100px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+    .feature-list li {
+      padding: 8px 0;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .feature-list li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">GM</span>
+      <span>POP Download GM</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="about.html">Sobre</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="download.html">Download</a>
+      <a href="apps.html">Aplicativos</a>
+      <a href="contact.html">Contato</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-section" style="min-height: 40vh; padding-bottom: 0;">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-light hero-light-one" aria-hidden="true"></div>
+      <div class="hero-light hero-light-two" aria-hidden="true"></div>
+      <div class="hero-content" style="text-align: center;">
+        <p class="eyebrow">Ecossistema POP Nuvem</p>
+        <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4rem);">
+          <span>Ferramentas para</span>
+          <span class="hero-title-accent">PC Gamer</span>
+        </h1>
+        <p class="hero-copy" style="max-width: 700px; margin: 20px auto 0;">
+          Todos os nossos softwares são gratuitos, leves e feitos para melhorar sua experiência no PC, seja nos jogos, no áudio ou na organização da sua biblioteca.
+        </p>
+      </div>
+    </div>
+
+    <div class="requirements-band" style="background: #0d0f0f; padding-top: 20px;">
+      <div class="apps-grid">
+        
+        <!-- App 1: POP Download GM -->
+        <div class="app-card">
+          <div class="app-icon">🎮</div>
+          <h3>POP Download GM</h3>
+          <div class="app-badge">Central de Jogos</div>
+          <div class="app-description">
+            Um hub gamer para PC feito para encontrar, organizar e baixar jogos de repack no Windows, com visual de launcher moderno e consumo extremamente baixo de RAM.
+          </div>
+          <ul class="feature-list">
+            <li>Biblioteca visual de jogos</li>
+            <li>Barra de progresso de download</li>
+            <li>Baixíssimo consumo de memória</li>
+            <li>Suporte a repacks populares</li>
+          </ul>
+          <div class="button-group">
+            <a href="download.html" class="button button-primary">Saiba mais</a>
+            <a href="download.html" class="button button-secondary">Baixar</a>
+          </div>
+        </div>
+
+        <!-- App 2: PopBoost -->
+        <div class="app-card">
+          <div class="app-icon">🚀</div>
+          <h3>PopBoost</h3>
+          <div class="app-badge">Otimizador de Desempenho</div>
+          <div class="app-description">
+            O PopBoost escaneia seu Windows e desliga processos inúteis em 1 clique, liberando toda a potência da sua memória RAM e do seu processador direto para o seu jogo.
+          </div>
+          <ul class="feature-list">
+            <li>Libera memória RAM para o jogo</li>
+            <li>Pausa serviços de fundo (Windows Update, etc.)</li>
+            <li>100% reversível com botão de restauração</li>
+            <li>Anti-Ban (não altera arquivos de jogos)</li>
+          </ul>
+          <div class="button-group">
+            <a href="https://www.popnuvem.qzz.io/p/pare-de-perder-trocacao-por-causa-de.html" class="button button-primary" target="_blank">Saiba mais</a>
+            <a href="https://github.com/emersonsantarem/PopBoost1/releases/tag/Games" class="button button-secondary" target="_blank">Baixar</a>
+          </div>
+        </div>
+
+        <!-- App 3: Pop Sound -->
+        <div class="app-card">
+          <div class="app-icon">🎧</div>
+          <h3>Pop Sound</h3>
+          <div class="app-badge">Processador de Áudio</div>
+          <div class="app-description">
+            Equalize seus jogos, turbine sua voz para lives e liberte o verdadeiro poder dos seus fones de ouvido. Um processador de áudio gratuito e leve para seu PC.
+          </div>
+          <ul class="feature-list">
+            <li>Controle de graves e modo imersão</li>
+            <li>Filtros profissionais para microfone</li>
+            <li>Zero latência e consumo de CPU</li>
+            <li>Construído em Rust, alta performance</li>
+          </ul>
+          <div class="button-group">
+            <a href="https://www.popnuvem.qzz.io/p/eleve-o-som-do-seu-pc-com-o-pop-sound.html" class="button button-primary" target="_blank">Saiba mais</a>
+            <a href="https://github.com/emersonsantarem/PopSound/releases/tag/som" class="button button-secondary" target="_blank">Baixar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span>POP Download GM</span>
+      <span>Fazendo parte do ecossistema POP Nuvem</span>
+    </div>
+    <div style="display: flex; gap: 24px;">
+      <a href="privacy.html">Privacidade</a>
+      <a href="terms.html">Termos</a>
+    </div>
+  </footer>
+</body>
+</html>
